@@ -20,14 +20,12 @@ public class ClientHandler implements Runnable {
 
     }
 
-
     // Send method will send to all clients!
     private void send(String msg) {
         for (ClientHandler aClient : clients) {
             aClient.out.println(msg);
         }
     }
-
 
     boolean runnning = true;
 
